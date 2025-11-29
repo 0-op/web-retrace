@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Retrace</title>
     <link rel="stylesheet" href="sidepanel.css">
 </head>
+
 <body>
     <div class="container">
         <!-- 头部 -->
@@ -17,6 +19,14 @@
             <p class="subtitle">本地知识库助手</p>
         </header>
 
+        <!-- 记忆按钮 -->
+        <div class="action-container">
+            <button id="memorizeButton" class="memorize-button">
+                <span class="button-icon">📝</span>
+                <span class="button-text">Memorize This Page</span>
+            </button>
+        </div>
+
         <!-- 消息显示区域 -->
         <div class="messages-container" id="messagesContainer">
             <div class="welcome-message">
@@ -27,12 +37,7 @@
 
         <!-- 输入区域 -->
         <div class="input-container">
-            <textarea 
-                id="messageInput" 
-                class="message-input" 
-                placeholder="输入您的消息..."
-                rows="2"
-            ></textarea>
+            <textarea id="messageInput" class="message-input" placeholder="输入您的消息..." rows="2"></textarea>
             <button id="sendButton" class="send-button">
                 <span class="button-text">发送</span>
                 <span class="button-icon">→</span>
@@ -48,4 +53,5 @@
 
     <script src="sidepanel.js"></script>
 </body>
+
 </html>

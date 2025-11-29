@@ -5,7 +5,12 @@
   "description": "本地优先的 RAG 知识库，用于浏览器历史管理",
   "permissions": [
     "sidePanel",
-    "storage"
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "side_panel": {
     "default_path": "sidepanel.html"
