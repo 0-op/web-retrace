@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Retrace</title>
+    <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1 class="title">
+                <span class="icon">🧠</span>
+                Web-Retrace
+            </h1>
+            <p class="subtitle">本地知识库助手</p>
+        </header>
+
+        <!-- 消息显示区域 -->
+        <div class="messages-container" id="messagesContainer">
+            <div class="welcome-message">
+                <p>👋 欢迎使用 Web-Retrace</p>
+                <p class="hint">输入消息测试与后端的连接</p>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="input-container">
+            <textarea 
+                id="messageInput" 
+                class="message-input" 
+                placeholder="输入您的消息..."
+                rows="2"
+            ></textarea>
+            <button id="sendButton" class="send-button">
+                <span class="button-text">发送</span>
+                <span class="button-icon">→</span>
+            </button>
+        </div>
+
+        <!-- 状态指示器 -->
+        <div class="status-bar">
+            <span class="status-dot" id="statusDot"></span>
+            <span class="status-text" id="statusText">就绪</span>
+        </div>
+    </div>
+
+    <script src="sidepanel.js"></script>
+</body>
+</html>
