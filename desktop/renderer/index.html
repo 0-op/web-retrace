@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Retrace 知识库</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>📚 Web-Retrace 知识库</h1>
+            <div class="header-actions">
+                <button id="settingsBtn" class="settings-btn" title="设置">⚙️ 设置</button>
+                <div class="status-bar">
+                    <span class="status-indicator" id="statusIndicator"></span>
+                    <span id="statusText">连接中...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 搜索栏 -->
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="🔍 搜索已保存的页面..." class="search-input" />
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="totalPages">-</span>
+                <span class="stat-label">已保存页面</span>
+            </div>
+        </div>
+
+        <!-- 页面列表 -->
+        <div class="pages-section">
+            <h2>已保存的页面</h2>
+            <div id="pagesList" class="pages-list">
+                <div class="loading">加载中...</div>
+            </div>
+        </div>
+
+        <!-- 页面详情（模态框） -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="detailTitle">页面标题</h2>
+                <div class="detail-meta">
+                    <span id="detailTime"></span>
+                </div>
+                <div id="detailContent" class="detail-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

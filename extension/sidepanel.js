@@ -8,6 +8,17 @@ const messagesContainer = document.getElementById('messagesContainer');
 const statusDot = document.getElementById('statusDot');
 const statusText = document.getElementById('statusText');
 const memorizeButton = document.getElementById('memorizeButton');
+const freeModeToggle = document.getElementById('freeModeToggle');
+const modeLabel = document.getElementById('modeLabel');
+
+// 模式切换事件
+freeModeToggle.addEventListener('change', (e) => {
+    if (e.target.checked) {
+        modeLabel.textContent = '🌐 自由聊天模式（开启）';
+    } else {
+        modeLabel.textContent = '💬 自由聊天模式（关闭）';
+    }
+});
 
 // 更新状态指示器
 function updateStatus(status, text) {
@@ -62,8 +73,12 @@ async function sendMessage() {
     messageInput.value = '';
 
     try {
+        // 根据模式选择不同的API端点
+        const isFreeMode = freeModeToggle.checked;
+        const endpoint = isFreeMode ? `${API_BASE_URL}/chat-free` : `${API_BASE_URL}/chat`;
+
         // 调用后端 API
-        const response = await fetch(`${API_BASE_URL}/chat`, {
+        const response = await fetch(endpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

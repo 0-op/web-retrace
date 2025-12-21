@@ -1,0 +1,21 @@
+{
+  "name": "web-retrace-desktop",
+  "version": "1.0.0",
+  "description": "Web-Retrace Desktop Knowledge Base Manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "knowledge-base",
+    "rag",
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.2.7"
+  }
+}
